@@ -1,4 +1,4 @@
-package classPrac;
+package julyForth;
 
 import java.util.Scanner;
 

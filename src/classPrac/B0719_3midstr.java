@@ -2,11 +2,11 @@ package classPrac;
 
 import java.util.Scanner;
 
-public class b0719_3midstr {
+public class B0719_3midstr {
 
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
-		System.out.print("put an Stri오오오o split :");
+		System.out.print("put an String to split :");
 		String s = input.next();
 		System.out.print("Index to start :");
 		String a = input.next();
@@ -30,7 +30,6 @@ public class b0719_3midstr {
 		}else {
 			answ = s.substring(a,a+b);
 		}
-		 
 		return answ;
 	}
 
