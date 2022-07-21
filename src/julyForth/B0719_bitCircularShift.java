@@ -11,6 +11,7 @@ public class B0719_bitCircularShift {
 		System.out.print("n : ");
 		int n = input.nextInt();
 		System.out.println(circularShift(num,n));
+		input.close();
 	}
 	public static String circularShift(int num, int n){
 		String binaryChanged = Integer.toBinaryString(num);

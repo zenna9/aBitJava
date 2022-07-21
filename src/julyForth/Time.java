@@ -15,7 +15,7 @@ public class Time {
 		int hour = inp.nextInt();
 		int min = inp.nextInt();
 		int sec = inp.nextInt();
-		
+		inp.close();
 		Time second_time = new Time(hour, min, sec);
 		Time add_time = first_time.add(second_time);
 		System.out.println("add_time is :");

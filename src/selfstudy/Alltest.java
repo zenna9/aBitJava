@@ -1,7 +1,5 @@
 package selfstudy;
 
-import java.util.Arrays;
-
 public class Alltest {
 
 	public static void main(String[] args) {

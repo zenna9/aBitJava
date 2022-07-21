@@ -10,6 +10,7 @@ public class ReversedArray {
 		String s =sc.nextLine();
 		System.out.print("put an char for delete : ");
 		char c =sc.next().charAt(0);
+		sc.close();
 		
 		String result0 = revsqueezeWhile(s,c);
 		String result1 = revsqueezeForEach(s,c);

@@ -12,7 +12,7 @@ public class B0719_3midstr {
 		String a = input.next();
 		System.out.print("how many : ");
 		String b = input.next();
-		
+		input.close();
 		String result = midstr(s, a, b);
 		System.out.println("result is : "+result);
 	}
