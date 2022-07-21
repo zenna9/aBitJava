@@ -12,7 +12,7 @@ public class Select extends Tr{
 
 		if(isNum(s)&&isNum(t)){
 			return new Numcmp(s,t);
-		}else {
+		} else {
 			return new Strcmp(s,t);
 		}
 	}
