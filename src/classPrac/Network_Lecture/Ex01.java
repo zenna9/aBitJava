@@ -1,6 +1,7 @@
 package classPrac.Network_Lecture;
 
 public class Ex01 {
+    
     public void input(String name) throws Exception {
         if(name.equals("test")) {
             throw new Exception();

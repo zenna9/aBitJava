@@ -8,7 +8,7 @@ public class Client01 {
     public static void main(String[] args) throws Exception{
         //3
         //클라이언트에서 소켓 생성 : 얘가 실행이 되어야 서버가 값을 clientSocket에 넣어 반환할 수 있음
-        Socket clientSocket = new Socket("192.168.1.20",9999);
+        Socket clientSocket = new Socket("192.168.1.20",8888);
 
         //4
         //클라이언트가 데이터를 전달하도록 해볼것

@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.PrintWriter;
 //파일 복사하는 기능 만들기
-public class Ex4 {
+public class Ex04 {
     public static void main(String[] args) throws Exception{
         String addr = "c:\\Java\\aaBitJava\\";
         BufferedReader br = new BufferedReader(new FileReader(addr+"lecture.png"));

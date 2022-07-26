@@ -3,8 +3,8 @@ package selfstudy;
 public class Alltest {
 
 	public static void main(String[] args) {
-		String a= "-9.9989ae";
-		Double b = Double.parseDouble(a);
-		System.out.println(b);
+		String a = "hello	";
+		System.out.println(a.getClass().getName());
+		System.out.println(a.hashCode());
 	}
 }
