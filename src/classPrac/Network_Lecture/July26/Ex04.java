@@ -1,4 +1,4 @@
-package classPrac.Network_Lecture;
+package classPrac.Network_Lecture.July26;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

@@ -1,4 +1,4 @@
-package selfstudy;
+package selfstudy.JavaBase;
 
 import java.util.Arrays;
 

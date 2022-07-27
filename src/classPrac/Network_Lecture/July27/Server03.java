@@ -37,6 +37,7 @@ public class Server03 {
             input.close();
             dos.close();
             cs.close();
+            ss.close();
         }
     }
 }

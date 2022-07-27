@@ -47,6 +47,7 @@ class Sender extends Thread{
                 String message = sc.nextLine();
                 if(message.equals("quit")){
                     cs.close();
+                    sc.close();
                 }
                 dos.writeUTF(message);
             }
@@ -73,5 +74,7 @@ public class Server04 {
         //발신
         Sender sender = new Sender(cs);
         sender.start();
+
+        ss.close();
     }
 }

@@ -1,4 +1,4 @@
-package selfstudy;
+package selfstudy.JavaBase;
 
 public class DefaultValue {
 	public static void main(String[] args) {
@@ -7,6 +7,6 @@ public class DefaultValue {
 		
 		System.out.println("answer is "+a.solution(b));
 		//System.out.println(a.solution({1, 2, 3}));
-		//ÀÌ°Ç ¿Ö ¾ÈµÅ?
+		//ï¿½Ì°ï¿½ ï¿½ï¿½ ï¿½Èµï¿½?
 	}
 }
