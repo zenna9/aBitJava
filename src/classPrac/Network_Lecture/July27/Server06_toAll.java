@@ -6,36 +6,25 @@ import java.util.*;
 //수신 _ inputStream
 class Reciever extends Thread{
       //-> 필드선언
-    List<Socket> socketList; //얘를 통해 인풋과 아웃풋을 다 받아올수있게되겠져
+      Socket cs;
     //생성자
-    Reciever(List<Socket> socketList){
-        this.socketList = socketList;
+    Reciever(Socket cs){
+        this.cs = cs;
     }
     //메서드
     public void run() {
-        String message="";
-        while(message==""){
-            try{
-                for (Socket i : socketList) {
-                    //받으면
-                    InputStream is = i.getInputStream();
-                    DataInputStream dis = new DataInputStream(is);
-                    message = dis.readUTF();
-                }
-            }catch(IOException e){
-                throw new RuntimeException(e);
-            }
-        }
-        //보내기
-        try {
-            if(message!=""){
-                for (Socket i : socketList) {
-                    OutputStream os = i.getOutputStream();
+        try{
+            InputStream is = cs.getInputStream();
+            DataInputStream dis = new DataInputStream(is);
+            while(dis !=null){ //받은 메시지가 있다면
+                String message = dis.readUTF();
+                for (Socket client : Server06_toAll.socketList) {
+                    OutputStream os = client.getOutputStream();
                     DataOutputStream dos = new DataOutputStream(os);
                     dos.writeUTF(message);
                 }
             }
-        } catch (IOException e) {
+        }catch(IOException e){
             throw new RuntimeException(e);
         }
     }
@@ -43,6 +32,8 @@ class Reciever extends Thread{
 
 //구현
 public class Server06_toAll {
+    static List<Socket> socketList;
+
     public static void main(String[] args) throws IOException {
         //클라이언트 리스트 생성
         List<Socket> socketList = new ArrayList<>();
@@ -55,12 +46,9 @@ public class Server06_toAll {
         while(true){
             cs = ss.accept();
             socketList.add(cs);
-            for(Socket i:socketList){
-                System.out.println(i.getInetAddress()+":"+i.getPort());
-            }
+            //수신
+            Reciever reciever = new Reciever(cs);
+            reciever.start();
         }
-        //수신
-        Reciever reciever = new Reciever(socketList);
-        reciever.start();
     }
 }
