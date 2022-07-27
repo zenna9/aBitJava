@@ -22,6 +22,7 @@ public class Server01 {
         //클라이언트가 연결요청(3악수) 보냈을 때 응답을 주는 코드
 
         Socket clientSocket = serverSocket.accept();
+        //응답을 받으면 클라이언트 정보를 clientSocket에 저장
         System.out.println("client IP addr : "+clientSocket.getLocalAddress());
         System.out.println("server IP addr : "+clientSocket.getInetAddress());
         System.out.println("client Port : "+clientSocket.getPort());

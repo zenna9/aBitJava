@@ -1,4 +1,4 @@
-package Mr_Sim_lecture;
+package classPrac.JavaBase_Lectrue;
 
 import java.util.Scanner;
 
